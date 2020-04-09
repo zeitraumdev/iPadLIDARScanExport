@@ -8,7 +8,7 @@ It is based on the [Visualising and Interacting with a Reconstructed Scene][1] s
 ``` swift
 @IBAction func saveButtonPressed(_ sender: UIButton)
 ```
-and is not in any way, shape or form intended to be optimized or parallelized.
+method and is not in any way, shape or form intended to be optimized or parallelized.
 It's purpose is strictly educational :wink:
 
 ## What you need to run it:

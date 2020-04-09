@@ -2,7 +2,7 @@
 
 This project shows how to export an OBJ file of the 3D mesh created by an ARKit 3.5 Application with the iPad Pro (4th generation).
 
-It is based on the [Visualising and Interacting with a Reconstructed Scene][1] sample by Apple and leverages the Model I/O framework to convert and assamble and export the mesh.
+It is based on the [Visualising and Interacting with a Reconstructed Scene][1] sample by Apple and leverages the Model I/O framework to convert, assamble and export the mesh.
 
 ## The magic happens in the [ViewControllers][2]:
 ``` swift

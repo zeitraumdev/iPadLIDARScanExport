@@ -4,6 +4,8 @@ This project shows how to export an OBJ file of the 3D mesh created by an ARKit 
 
 It is based on the [Visualising and Interacting with a Reconstructed Scene][1] sample by Apple and leverages the Model I/O framework to convert, assamble and export the mesh.
 
+You can read more about it and our assessment of the iPad Pro LIDAR sensor on our [Medium.com][3] article.
+
 ## The magic happens in the [ViewControllers][2]:
 ``` swift
 @IBAction func saveButtonPressed(_ sender: UIButton)
@@ -20,3 +22,4 @@ It's purpose is strictly educational :wink:
 
 [1]:https://developer.apple.com/documentation/arkit/world_tracking/visualizing_and_interacting_with_a_reconstructed_scene
 [2]:iPadLIDARScanExport/ViewController.swift
+[3]:https://medium.com/zeitraumgruppe/what-arkit-3-5-and-the-new-ipad-pro-bring-to-the-table-d4bf25e5dd87

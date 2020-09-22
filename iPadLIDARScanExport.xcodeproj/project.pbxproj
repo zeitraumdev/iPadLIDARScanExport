@@ -22,7 +22,7 @@
 		5223915F2519FB560042F709 /* AAPLTransforms.mm in Sources */ = {isa = PBXBuildFile; fileRef = 522391502519FB550042F709 /* AAPLTransforms.mm */; };
 		522391602519FB560042F709 /* PointCloudMetalView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 522391522519FB550042F709 /* PointCloudMetalView.mm */; };
 		522391662519FE4A0042F709 /* ChooseDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522391652519FE4A0042F709 /* ChooseDemoVC.swift */; };
-		717F7FEF23F054DC00208378 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 717F7FEE23F054DC00208378 /* README.md */; };
+		52239168251A0BF60042F709 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 52239167251A0BF60042F709 /* README */; };
 		E136398023EB064300668585 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E136397F23EB064300668585 /* RoundedButton.swift */; };
 		E1635E1623D5BDFD0031A7D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1635E1523D5BDFD0031A7D8 /* AppDelegate.swift */; };
 		E1635E1823D5BDFD0031A7D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1635E1723D5BDFD0031A7D8 /* ViewController.swift */; };
@@ -54,7 +54,7 @@
 		522391522519FB550042F709 /* PointCloudMetalView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PointCloudMetalView.mm; sourceTree = "<group>"; };
 		522391642519FCAC0042F709 /* LIDAR_Scan_Export-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LIDAR_Scan_Export-Bridging-Header.h"; sourceTree = "<group>"; };
 		522391652519FE4A0042F709 /* ChooseDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDemoVC.swift; sourceTree = "<group>"; };
-		717F7FEE23F054DC00208378 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		52239167251A0BF60042F709 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		AD2D44B524378AF40052D2C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E136397F23EB064300668585 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		E1635E1223D5BDFD0031A7D8 /* LIDAR Scan Export.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LIDAR Scan Export.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +139,7 @@
 		E1635E0923D5BDFD0031A7D8 = {
 			isa = PBXGroup;
 			children = (
-				717F7FEE23F054DC00208378 /* README.md */,
+				52239167251A0BF60042F709 /* README */,
 				E1635E1423D5BDFD0031A7D8 /* iPadLIDARScanExport */,
 				E1635E1323D5BDFD0031A7D8 /* Products */,
 				EA0E67A9F6B3B2B8047DADCB /* Configuration */,
@@ -240,9 +240,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52239168251A0BF60042F709 /* README in Resources */,
 				E1635E2223D5BDFE0031A7D8 /* LaunchScreen.storyboard in Resources */,
 				E1635E1F23D5BDFE0031A7D8 /* Assets.xcassets in Resources */,
-				717F7FEF23F054DC00208378 /* README.md in Resources */,
 				E1635E1D23D5BDFD0031A7D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

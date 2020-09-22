@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KeV-qh-Aoi">
     <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4Z-bN-ivP">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <rect key="frame" x="0.0" y="50" width="1024" height="1316"/>
                             </arView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYp-l9-Sbs" customClass="RoundedButton" customModule="LIDAR_Scan_Export" customModuleProvider="target">
                                 <rect key="frame" x="924" y="1306" width="70" height="30"/>
@@ -48,6 +48,17 @@
                                     <action selector="togglePlaneDetectionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6M-0l-cSl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCC-Zr-En4" customClass="RoundedButton" customModule="LIDAR_Scan_Export" customModuleProvider="target">
+                                <rect key="frame" x="694" y="1306" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ThD-Dp-9EZ"/>
+                                </constraints>
+                                <state key="normal" title="Capture Screenshot"/>
+                                <connections>
+                                    <action selector="captureScreenShotAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLt-HK-b1S"/>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tlP-dd-cIv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -57,13 +68,16 @@
                             <constraint firstItem="l55-w1-dvd" firstAttribute="leading" secondItem="28S-lI-gMP" secondAttribute="trailing" constant="8" id="K2g-i6-Ord"/>
                             <constraint firstItem="eng-pw-LPV" firstAttribute="trailing" secondItem="fYp-l9-Sbs" secondAttribute="trailing" constant="30" id="M8T-WK-iRE"/>
                             <constraint firstItem="k4Z-bN-ivP" firstAttribute="centerX" secondItem="pDv-4v-CSH" secondAttribute="centerX" id="XIC-2g-04I"/>
+                            <constraint firstItem="WCC-Zr-En4" firstAttribute="centerY" secondItem="fYp-l9-Sbs" secondAttribute="centerY" id="bIO-5b-2hZ"/>
                             <constraint firstItem="l55-w1-dvd" firstAttribute="baseline" secondItem="28S-lI-gMP" secondAttribute="baseline" id="fBf-zL-pTg"/>
                             <constraint firstItem="k4Z-bN-ivP" firstAttribute="top" secondItem="eng-pw-LPV" secondAttribute="top" id="fOa-iT-qD8"/>
                             <constraint firstItem="k4Z-bN-ivP" firstAttribute="bottom" secondItem="eng-pw-LPV" secondAttribute="bottom" constant="20" id="gOQ-O6-CEU"/>
                             <constraint firstItem="28S-lI-gMP" firstAttribute="baseline" secondItem="fYp-l9-Sbs" secondAttribute="baseline" id="iqx-po-IQI"/>
+                            <constraint firstItem="fYp-l9-Sbs" firstAttribute="leading" secondItem="WCC-Zr-En4" secondAttribute="trailing" constant="30" id="rDN-hZ-Yr8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eng-pw-LPV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sFM-bf-B8G"/>
                     <connections>
                         <outlet property="arView" destination="k4Z-bN-ivP" id="EeW-ii-L6y"/>
                         <outlet property="planeDetectionButton" destination="l55-w1-dvd" id="n8V-Xt-Xde"/>
@@ -73,7 +87,209 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.9375" y="133.08931185944363"/>
+            <point key="canvasLocation" x="861" y="140"/>
+        </scene>
+        <!--Choose DemoVC-->
+        <scene sceneID="nTH-hh-diN">
+            <objects>
+                <viewController id="GOF-Fj-ptV" customClass="ChooseDemoVC" customModule="LIDAR_Scan_Export" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B2Z-0T-wA7">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh9-ed-G7m">
+                                <rect key="frame" x="449.5" y="638" width="125" height="30"/>
+                                <state key="normal" title="LIDAR Scan Demo"/>
+                                <connections>
+                                    <action selector="lidarClicked:" destination="GOF-Fj-ptV" eventType="touchUpInside" id="IJn-Qb-PBR"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="3qA-xx-KIa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fv-OM-hcC">
+                                <rect key="frame" x="451.5" y="718" width="121" height="30"/>
+                                <state key="normal" title="True Depth Demo"/>
+                                <connections>
+                                    <action selector="trueDepthClicked:" destination="GOF-Fj-ptV" eventType="touchUpInside" id="6oh-Yv-VCc"/>
+                                    <segue destination="jNW-yv-lKd" kind="show" id="0uG-Vu-iMC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Fv-OM-hcC" firstAttribute="top" secondItem="Uh9-ed-G7m" secondAttribute="bottom" constant="50" id="LWJ-E7-N7p"/>
+                            <constraint firstItem="Uh9-ed-G7m" firstAttribute="centerY" secondItem="QPc-xW-MDr" secondAttribute="centerY" constant="-45" id="Lj1-9a-KzL"/>
+                            <constraint firstItem="5Fv-OM-hcC" firstAttribute="centerX" secondItem="Uh9-ed-G7m" secondAttribute="centerX" id="Tmm-P0-zGe"/>
+                            <constraint firstItem="Uh9-ed-G7m" firstAttribute="centerX" secondItem="QPc-xW-MDr" secondAttribute="centerX" id="cBa-My-Yeh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QPc-xW-MDr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uBY-SP-8aA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Y5-kY-Mad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-319.921875" y="-505.12445095168368"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="6uf-KB-v6X">
+            <objects>
+                <viewController id="jNW-yv-lKd" customClass="CameraViewController" customModule="TrueDepthStreamer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vd5-Je-mnp" userLabel="View">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqW-OJ-zSd" userLabel="2D View" customClass="PreviewMetalView" customModule="TrueDepthStreamer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="1024" height="1296"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smooth Depth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-SO-nxA" userLabel="Smooth Depth Label">
+                                        <rect key="frame" x="65" y="23.5" width="126.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dfn-Aa-cFz">
+                                        <rect key="frame" x="-5" y="1262" width="1034" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <action selector="changeMixFactor:" destination="jNW-yv-lKd" eventType="valueChanged" id="Fgt-f6-O7e"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhJ-Yy-oxV" userLabel="Touch Depth">
+                                        <rect key="frame" x="1016" y="70" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7o-gT-CLO" userLabel="Depth Smoothing Switch">
+                                        <rect key="frame" x="8" y="20" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="changeDepthSmoothing:" destination="jNW-yv-lKd" eventType="valueChanged" id="UvK-E0-DQJ"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="O7o-gT-CLO" firstAttribute="centerY" secondItem="fuZ-SO-nxA" secondAttribute="centerY" id="3SQ-yH-kSP"/>
+                                    <constraint firstItem="O7o-gT-CLO" firstAttribute="leading" secondItem="qqW-OJ-zSd" secondAttribute="leading" constant="8" id="42F-E3-rZF"/>
+                                    <constraint firstItem="lhJ-Yy-oxV" firstAttribute="trailing" secondItem="qqW-OJ-zSd" secondAttribute="trailing" constant="-8" id="6lQ-hP-wGD"/>
+                                    <constraint firstItem="lhJ-Yy-oxV" firstAttribute="top" secondItem="qqW-OJ-zSd" secondAttribute="top" constant="70" id="QmA-Ab-FkM"/>
+                                    <constraint firstItem="O7o-gT-CLO" firstAttribute="top" secondItem="qqW-OJ-zSd" secondAttribute="top" constant="20" id="aYZ-pr-1lc"/>
+                                    <constraint firstItem="fuZ-SO-nxA" firstAttribute="leading" secondItem="O7o-gT-CLO" secondAttribute="trailing" constant="8" id="uwU-kF-o4f"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxb-d2-DU3" userLabel="3D View" customClass="PointCloudMetalView">
+                                <rect key="frame" x="0.0" y="50" width="1024" height="1296"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Panning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXR-B2-TUb">
+                                        <rect key="frame" x="65" y="1248.5" width="115.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.98406440019999997" blue="0.001863333862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2g-vl-b4B" userLabel="Auto Panning Switch">
+                                        <rect key="frame" x="8" y="1245" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="didAutoPanningChange:" destination="jNW-yv-lKd" eventType="valueChanged" id="nqc-xX-cfl"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bXR-B2-TUb" firstAttribute="leading" secondItem="h2g-vl-b4B" secondAttribute="trailing" constant="8" id="nSD-rD-d53"/>
+                                    <constraint firstItem="bXR-B2-TUb" firstAttribute="centerY" secondItem="h2g-vl-b4B" secondAttribute="centerY" id="zhT-8M-lYY"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TrueDepth Camera Unavailable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSf-vg-iS8" userLabel="Camera Unavailable">
+                                <rect key="frame" x="351" y="668.5" width="322" height="29"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5j-iK-DBV" userLabel="Resume">
+                                <rect key="frame" x="429.5" y="663.5" width="165" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                <state key="normal" title="Tap to resume">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resumeInterruptedSession:" destination="jNW-yv-lKd" eventType="touchUpInside" id="X2W-0z-R0g"/>
+                                </connections>
+                            </button>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SOC-Z7-5bz" userLabel="Cloud To JET Seg Ctrl">
+                                <rect key="frame" x="915" y="70" width="101" height="32"/>
+                                <segments>
+                                    <segment title="2D" width="50"/>
+                                    <segment title="3D" width="50"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeCloudToJET:" destination="jNW-yv-lKd" eventType="valueChanged" id="vl1-rh-efD"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VSf-vg-iS8" firstAttribute="centerX" secondItem="jEq-xk-iqi" secondAttribute="centerX" id="7bI-NH-Uqj"/>
+                            <constraint firstItem="Sxb-d2-DU3" firstAttribute="height" secondItem="qqW-OJ-zSd" secondAttribute="height" id="D7Q-Kx-91q"/>
+                            <constraint firstItem="Sxb-d2-DU3" firstAttribute="top" secondItem="qqW-OJ-zSd" secondAttribute="top" id="ENz-8K-6RT"/>
+                            <constraint firstItem="jEq-xk-iqi" firstAttribute="bottom" secondItem="qqW-OJ-zSd" secondAttribute="bottom" id="RyG-pD-Cc2"/>
+                            <constraint firstItem="jEq-xk-iqi" firstAttribute="leading" secondItem="h2g-vl-b4B" secondAttribute="leading" constant="-8" id="aBA-xf-IBG"/>
+                            <constraint firstItem="jEq-xk-iqi" firstAttribute="trailing" secondItem="qqW-OJ-zSd" secondAttribute="trailing" id="o0P-Lg-Tht"/>
+                            <constraint firstItem="jEq-xk-iqi" firstAttribute="top" secondItem="SOC-Z7-5bz" secondAttribute="top" constant="-20" id="oPN-DR-xDQ"/>
+                            <constraint firstItem="Sxb-d2-DU3" firstAttribute="leading" secondItem="qqW-OJ-zSd" secondAttribute="leading" id="pym-Kw-VxG"/>
+                            <constraint firstItem="E5j-iK-DBV" firstAttribute="centerX" secondItem="jEq-xk-iqi" secondAttribute="centerX" id="qmV-6M-ZON"/>
+                            <constraint firstItem="SOC-Z7-5bz" firstAttribute="trailing" secondItem="jEq-xk-iqi" secondAttribute="trailing" constant="-8" id="rhb-0x-03C"/>
+                            <constraint firstItem="E5j-iK-DBV" firstAttribute="centerY" secondItem="vd5-Je-mnp" secondAttribute="centerY" id="s0z-AQ-LoO"/>
+                            <constraint firstItem="VSf-vg-iS8" firstAttribute="centerY" secondItem="vd5-Je-mnp" secondAttribute="centerY" id="tqV-pK-FIj"/>
+                            <constraint firstItem="Sxb-d2-DU3" firstAttribute="width" secondItem="qqW-OJ-zSd" secondAttribute="width" id="txf-un-LMe"/>
+                            <constraint firstItem="qqW-OJ-zSd" firstAttribute="leading" secondItem="jEq-xk-iqi" secondAttribute="leading" id="x0i-hi-ujd"/>
+                            <constraint firstItem="h2g-vl-b4B" firstAttribute="bottom" secondItem="jEq-xk-iqi" secondAttribute="bottom" constant="-20" id="xQb-fX-tiS"/>
+                            <constraint firstItem="qqW-OJ-zSd" firstAttribute="top" secondItem="jEq-xk-iqi" secondAttribute="top" id="yf0-ck-UmC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jEq-xk-iqi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KUl-Qd-DpB"/>
+                    <connections>
+                        <outlet property="autoPanningSwitch" destination="h2g-vl-b4B" id="mzq-77-9Tm"/>
+                        <outlet property="cameraUnavailableLabel" destination="VSf-vg-iS8" id="SgP-bc-gZI"/>
+                        <outlet property="cloudToJETSegCtrl" destination="SOC-Z7-5bz" id="4yR-nM-UP0"/>
+                        <outlet property="cloudView" destination="Sxb-d2-DU3" id="9ru-kp-Nvx"/>
+                        <outlet property="depthSmoothingSwitch" destination="O7o-gT-CLO" id="7dH-oN-1uP"/>
+                        <outlet property="jetView" destination="qqW-OJ-zSd" id="b13-x4-0un"/>
+                        <outlet property="mixFactorSlider" destination="dfn-Aa-cFz" id="9Ps-lf-1zX"/>
+                        <outlet property="resumeButton" destination="E5j-iK-DBV" id="t5v-07-ppH"/>
+                        <outlet property="smoothDepthLabel" destination="fuZ-SO-nxA" id="0gh-K3-KfH"/>
+                        <outlet property="touchDepth" destination="lhJ-Yy-oxV" id="SSe-KT-cri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5U-OH-pQu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861.328125" y="-851.24450951683741"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HJE-ps-KIv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KeV-qh-Aoi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Voj-yZ-hNt">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GOF-Fj-ptV" kind="relationship" relationship="rootViewController" id="5eK-CH-3Oz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nOG-q3-teZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1045.3125" y="-505.12445095168368"/>
         </scene>
     </scenes>
 </document>

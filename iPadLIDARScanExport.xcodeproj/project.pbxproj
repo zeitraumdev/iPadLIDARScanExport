@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		0C26373623E065EB0017A846 /* ViewController+CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C26373523E065EA0017A846 /* ViewController+CoachingOverlay.swift */; };
+		522391532519FB560042F709 /* PreviewMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522391402519FB550042F709 /* PreviewMetalView.swift */; };
+		522391542519FB560042F709 /* VideoMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522391412519FB550042F709 /* VideoMixer.swift */; };
+		522391552519FB560042F709 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522391422519FB550042F709 /* CameraViewController.swift */; };
+		522391562519FB560042F709 /* HistogramCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 522391432519FB550042F709 /* HistogramCalculator.m */; };
+		522391572519FB560042F709 /* minMaxFromBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 522391442519FB550042F709 /* minMaxFromBuffer.m */; };
+		522391582519FB560042F709 /* DepthToJETConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522391452519FB550042F709 /* DepthToJETConverter.swift */; };
+		522391592519FB560042F709 /* PointCloud.metal in Sources */ = {isa = PBXBuildFile; fileRef = 522391472519FB550042F709 /* PointCloud.metal */; };
+		5223915A2519FB560042F709 /* Mixer.metal in Sources */ = {isa = PBXBuildFile; fileRef = 522391482519FB550042F709 /* Mixer.metal */; };
+		5223915B2519FB560042F709 /* DepthToJET.metal in Sources */ = {isa = PBXBuildFile; fileRef = 522391492519FB550042F709 /* DepthToJET.metal */; };
+		5223915C2519FB560042F709 /* PassThrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5223914A2519FB550042F709 /* PassThrough.metal */; };
+		5223915D2519FB560042F709 /* FilterRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223914B2519FB550042F709 /* FilterRenderer.swift */; };
+		5223915F2519FB560042F709 /* AAPLTransforms.mm in Sources */ = {isa = PBXBuildFile; fileRef = 522391502519FB550042F709 /* AAPLTransforms.mm */; };
+		522391602519FB560042F709 /* PointCloudMetalView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 522391522519FB550042F709 /* PointCloudMetalView.mm */; };
+		522391662519FE4A0042F709 /* ChooseDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522391652519FE4A0042F709 /* ChooseDemoVC.swift */; };
 		717F7FEF23F054DC00208378 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 717F7FEE23F054DC00208378 /* README.md */; };
 		E136398023EB064300668585 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E136397F23EB064300668585 /* RoundedButton.swift */; };
 		E1635E1623D5BDFD0031A7D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1635E1523D5BDFD0031A7D8 /* AppDelegate.swift */; };
@@ -21,6 +35,25 @@
 /* Begin PBXFileReference section */
 		0C26373523E065EA0017A846 /* ViewController+CoachingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+CoachingOverlay.swift"; sourceTree = "<group>"; };
 		28811F3E4EB27EC6196B6F5B /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		5223913E2519FB550042F709 /* minMaxFromBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minMaxFromBuffer.h; sourceTree = "<group>"; };
+		522391402519FB550042F709 /* PreviewMetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewMetalView.swift; sourceTree = "<group>"; };
+		522391412519FB550042F709 /* VideoMixer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoMixer.swift; sourceTree = "<group>"; };
+		522391422519FB550042F709 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		522391432519FB550042F709 /* HistogramCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistogramCalculator.m; sourceTree = "<group>"; };
+		522391442519FB550042F709 /* minMaxFromBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = minMaxFromBuffer.m; sourceTree = "<group>"; };
+		522391452519FB550042F709 /* DepthToJETConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthToJETConverter.swift; sourceTree = "<group>"; };
+		522391472519FB550042F709 /* PointCloud.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PointCloud.metal; sourceTree = "<group>"; };
+		522391482519FB550042F709 /* Mixer.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Mixer.metal; sourceTree = "<group>"; };
+		522391492519FB550042F709 /* DepthToJET.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DepthToJET.metal; sourceTree = "<group>"; };
+		5223914A2519FB550042F709 /* PassThrough.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PassThrough.metal; sourceTree = "<group>"; };
+		5223914B2519FB550042F709 /* FilterRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterRenderer.swift; sourceTree = "<group>"; };
+		5223914D2519FB550042F709 /* HistogramCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistogramCalculator.h; sourceTree = "<group>"; };
+		5223914F2519FB550042F709 /* PointCloudMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointCloudMetalView.h; sourceTree = "<group>"; };
+		522391502519FB550042F709 /* AAPLTransforms.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLTransforms.mm; sourceTree = "<group>"; };
+		522391512519FB550042F709 /* AAPLTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLTransforms.h; sourceTree = "<group>"; };
+		522391522519FB550042F709 /* PointCloudMetalView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PointCloudMetalView.mm; sourceTree = "<group>"; };
+		522391642519FCAC0042F709 /* LIDAR_Scan_Export-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LIDAR_Scan_Export-Bridging-Header.h"; sourceTree = "<group>"; };
+		522391652519FE4A0042F709 /* ChooseDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDemoVC.swift; sourceTree = "<group>"; };
 		717F7FEE23F054DC00208378 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AD2D44B524378AF40052D2C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E136397F23EB064300668585 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -52,6 +85,47 @@
 				28811F3E4EB27EC6196B6F5B /* LICENSE.txt */,
 			);
 			path = LICENSE;
+			sourceTree = "<group>";
+		};
+		5223913D2519FB550042F709 /* TrueDepthStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				522391422519FB550042F709 /* CameraViewController.swift */,
+				522391452519FB550042F709 /* DepthToJETConverter.swift */,
+				5223914B2519FB550042F709 /* FilterRenderer.swift */,
+				5223914D2519FB550042F709 /* HistogramCalculator.h */,
+				522391432519FB550042F709 /* HistogramCalculator.m */,
+				522391642519FCAC0042F709 /* LIDAR_Scan_Export-Bridging-Header.h */,
+				5223913E2519FB550042F709 /* minMaxFromBuffer.h */,
+				522391442519FB550042F709 /* minMaxFromBuffer.m */,
+				5223914E2519FB550042F709 /* PointCloud */,
+				522391402519FB550042F709 /* PreviewMetalView.swift */,
+				522391462519FB550042F709 /* Shaders */,
+				522391412519FB550042F709 /* VideoMixer.swift */,
+			);
+			path = TrueDepthStreamer;
+			sourceTree = "<group>";
+		};
+		522391462519FB550042F709 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				522391472519FB550042F709 /* PointCloud.metal */,
+				522391482519FB550042F709 /* Mixer.metal */,
+				522391492519FB550042F709 /* DepthToJET.metal */,
+				5223914A2519FB550042F709 /* PassThrough.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		5223914E2519FB550042F709 /* PointCloud */ = {
+			isa = PBXGroup;
+			children = (
+				5223914F2519FB550042F709 /* PointCloudMetalView.h */,
+				522391502519FB550042F709 /* AAPLTransforms.mm */,
+				522391512519FB550042F709 /* AAPLTransforms.h */,
+				522391522519FB550042F709 /* PointCloudMetalView.mm */,
+			);
+			path = PointCloud;
 			sourceTree = "<group>";
 		};
 		AD2D44B424378AF40052D2C4 /* Frameworks */ = {
@@ -86,14 +160,16 @@
 			isa = PBXGroup;
 			children = (
 				E1635E1523D5BDFD0031A7D8 /* AppDelegate.swift */,
+				E1635E1E23D5BDFE0031A7D8 /* Assets.xcassets */,
+				522391652519FE4A0042F709 /* ChooseDemoVC.swift */,
+				E1635E2D23D736E70031A7D8 /* Extensions.swift */,
+				E1635E2323D5BDFE0031A7D8 /* Info.plist */,
+				E1635E2023D5BDFE0031A7D8 /* LaunchScreen.storyboard */,
+				E1635E1B23D5BDFD0031A7D8 /* Main.storyboard */,
+				E136397F23EB064300668585 /* RoundedButton.swift */,
+				5223913D2519FB550042F709 /* TrueDepthStreamer */,
 				E1635E1723D5BDFD0031A7D8 /* ViewController.swift */,
 				0C26373523E065EA0017A846 /* ViewController+CoachingOverlay.swift */,
-				E1635E2D23D736E70031A7D8 /* Extensions.swift */,
-				E136397F23EB064300668585 /* RoundedButton.swift */,
-				E1635E1B23D5BDFD0031A7D8 /* Main.storyboard */,
-				E1635E1E23D5BDFE0031A7D8 /* Assets.xcassets */,
-				E1635E2023D5BDFE0031A7D8 /* LaunchScreen.storyboard */,
-				E1635E2323D5BDFE0031A7D8 /* Info.plist */,
 			);
 			path = iPadLIDARScanExport;
 			sourceTree = "<group>";
@@ -178,10 +254,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5223915F2519FB560042F709 /* AAPLTransforms.mm in Sources */,
+				522391562519FB560042F709 /* HistogramCalculator.m in Sources */,
 				E1635E1823D5BDFD0031A7D8 /* ViewController.swift in Sources */,
+				522391592519FB560042F709 /* PointCloud.metal in Sources */,
 				E136398023EB064300668585 /* RoundedButton.swift in Sources */,
+				5223915A2519FB560042F709 /* Mixer.metal in Sources */,
 				E1635E1623D5BDFD0031A7D8 /* AppDelegate.swift in Sources */,
+				522391542519FB560042F709 /* VideoMixer.swift in Sources */,
+				522391662519FE4A0042F709 /* ChooseDemoVC.swift in Sources */,
+				522391532519FB560042F709 /* PreviewMetalView.swift in Sources */,
+				522391582519FB560042F709 /* DepthToJETConverter.swift in Sources */,
+				522391552519FB560042F709 /* CameraViewController.swift in Sources */,
+				5223915B2519FB560042F709 /* DepthToJET.metal in Sources */,
+				522391572519FB560042F709 /* minMaxFromBuffer.m in Sources */,
+				5223915D2519FB560042F709 /* FilterRenderer.swift in Sources */,
 				E1635E2E23D736E70031A7D8 /* Extensions.swift in Sources */,
+				522391602519FB560042F709 /* PointCloudMetalView.mm in Sources */,
+				5223915C2519FB560042F709 /* PassThrough.metal in Sources */,
 				0C26373623E065EB0017A846 /* ViewController+CoachingOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,7 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7KV56FWH25;
+				DEVELOPMENT_TEAM = 2GN6Q3MFP2;
 				INFOPLIST_FILE = "$(SRCROOT)/iPadLIDARScanExport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,6 +431,7 @@
 				PRODUCT_NAME = "LIDAR Scan Export";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iPadLIDARScanExport/TrueDepthStreamer/LIDAR_Scan_Export-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -353,7 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7KV56FWH25;
+				DEVELOPMENT_TEAM = 2GN6Q3MFP2;
 				INFOPLIST_FILE = "$(SRCROOT)/iPadLIDARScanExport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -363,6 +454,7 @@
 				PRODUCT_NAME = "LIDAR Scan Export";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iPadLIDARScanExport/TrueDepthStreamer/LIDAR_Scan_Export-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

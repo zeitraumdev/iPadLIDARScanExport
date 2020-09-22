@@ -78,8 +78,6 @@ class ViewController: UIViewController, ARSessionDelegate {
         }
     }
     
-    
-    
     /// - Tag: TogglePlaneDetection
     @IBAction func togglePlaneDetectionButtonPressed(_ button: UIButton) {
         guard let configuration = arView.session.configuration as? ARWorldTrackingConfiguration else {
@@ -212,6 +210,42 @@ class ViewController: UIViewController, ARSessionDelegate {
             }
             alertController.addAction(restartAction)
             self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func captureScreenShotAction(_ sender: Any) {
+        //1. Create A Snapshot
+        arView.snapshot(saveToHDR: true, completion: { arimage in
+            //2. Save It The Photos Album
+            if let image = arimage?.images?.first{
+                UIImageWriteToSavedPhotosAlbum(image , self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+            }
+        })
+        
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+
+        if let error = error {
+            print("Error Saving ARKit Scene \(error)")
+        } else {
+            print("ARKit Scene Successfully Saved")
+            let alert = UIAlertController(title: "", message: "Save photo to album successfully", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                  switch action.style{
+                  case .default:
+                        print("default")
+                        break
+                  case .cancel:
+                        print("cancel")
+                        break
+                  case .destructive:
+                        print("destructive")
+                        break
+                  default:
+                        break
+                }}))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

